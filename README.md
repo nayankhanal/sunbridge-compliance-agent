@@ -3,7 +3,7 @@
 An autonomous pipeline that fetches two manufacturer datasheets for the same solar
 inverter family, reads the **5 kW model's** specs out of each, reconciles the two
 sources **field by field**, and produces a clean, source-attributed draft an import
-agent can use — showing where the sheets agree, conflict, contradict themselves, or
+agent can use - showing where the sheets agree, conflict, contradict themselves, or
 only mention something once, **without ever picking one value and hiding the other.**
 
 The two source datasheets are different variants (AM2-P1 vs AM2) and different
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 # Try it with zero setup (fixture data, no key, no network):
 python run.py --mock
 
-# Real run — reads the PDFs with a vision model:
+# Real run - reads the PDFs with a vision model:
 cp .env.example .env          # then paste your FREE Gemini key into .env
 python run.py
 
@@ -36,10 +36,10 @@ A **free** Gemini API key (no credit card) comes from
 model), which reads images and returns JSON on the free tier.
 
 Outputs land in `output/`:
-- **`reconciled.json`** — structured, machine-readable; every field carries its
+- **`reconciled.json`** - structured, machine-readable; every field carries its
   value **per source**, the raw printed text, a **confidence**, and a reconciliation
   **status**.
-- **`compliance_draft.md`** — the human-readable draft, grouped by the import
+- **`compliance_draft.md`** - the human-readable draft, grouped by the import
   checklist, conflicts surfaced at the top.
 
 (`output/` is committed so you can read a sample without running anything.)
@@ -60,11 +60,11 @@ fetch  →  render  →  extract (per sheet)  →  reconcile  →  draft
 
 Each node is in `src/`; the graph is wired in `src/graph.py`.
 
-### Extraction / OCR approach — and why vision
+### Extraction / OCR approach - and why vision
 
 The Deye spec sheet is a dense multi-column table (8 model columns × ~40 rows).
-Plain PDF **text extraction interleaves the columns** — the 5 kW value ends up next
-to the wrong model — which is exactly the trap the brief warns about. So instead of
+Plain PDF **text extraction interleaves the columns** - the 5 kW value ends up next
+to the wrong model - which is exactly the trap the brief warns about. So instead of
 parsing text, the pipeline **renders each page to a 200-DPI image and gives it to a
 vision model** (`src/render.py` → `src/extract.py`), which reads the page as laid
 out and picks the correct column. Every page is rendered (not a hardcoded "page 2"),
@@ -94,11 +94,17 @@ wording onto stable keys, and reconciliation assigns each field one status:
 | `conflict` | both sheets, different values | Max power **5.5 kW** vs **5.5 kVA** |
 | `only_one` | present in a single sheet | Overvoltage category (AM2 only) |
 | `inconsistent` | a sheet contradicts itself | Weight printed as 4.8 **and** 11 kg |
-| `missing` | in neither sheet | — |
+| `missing` | in neither sheet | - |
 
 Unit differences are treated as conflicts on purpose (`kW ≠ kVA`), and a small
 equivalence map handles known synonyms so wording differences aren't reported as
-conflicts.
+conflicts. Spacing around `/ , % °` is normalized before comparing, so cosmetic
+differences like `2 / 1+1` vs `2/1+1` don't show up as conflicts.
+
+On the live sheets the run currently surfaces `agree`, `agree_reworded`,
+`conflict` and `only_one`. `inconsistent` is demonstrated by `--mock`: on the real
+PDFs the model read a single weight (11 kg) and didn't flag the stray 4.8, and
+reporting what it actually saw beats forcing a status.
 
 ---
 
@@ -137,7 +143,7 @@ output/                    sample reconciled.json + compliance_draft.md
 
 ## Not hardcoded
 
-No datasheet **value** is written into the code — only which URLs to fetch and which
+No datasheet **value** is written into the code - only which URLs to fetch and which
 model row to target. The values are read from the PDFs at run time, so the pipeline
 would survive a different revision of the same datasheet. (`src/fixtures.py` contains
 hand-written values, but those are **test data** for `--mock`, clearly labeled, and
@@ -154,4 +160,5 @@ never used on the real path.)
 - **One product family.** The canonical field list is tuned to these Deye sheets;
   a new vendor would need its synonyms added.
 - **No caching of model responses**, so re-runs re-spend tokens.
-- Tests cover reconciliation (pure logic); the vision call is exercised manually.
+- Tests cover reconciliation (pure logic); the vision extraction has been run end
+  to end against the live PDFs but isn't covered by an automated test.

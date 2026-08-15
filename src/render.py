@@ -1,10 +1,8 @@
-"""Turn a PDF into page images for the vision model.
+"""Render PDF pages to PNG for the vision model.
 
-Why images instead of extracted text: the Deye spec table is a dense multi-column
-grid. Plain text extraction interleaves the columns, so the 5 kW value can end up
-next to the wrong model. A vision model reads the page as laid out and can pick
-the correct column. We render *every* page (these sheets are 2 pages) rather than
-hardcoding "page 2", so a re-laid-out revision still works.
+Text extraction scrambles the multi-column spec table, so we send page images
+instead. Render every page (not a hardcoded "page 2") so a re-laid-out sheet
+still works.
 """
 from __future__ import annotations
 

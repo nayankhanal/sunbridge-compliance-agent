@@ -1,11 +1,8 @@
-"""Fixture extractions for --mock runs and tests.
+"""Test data for --mock runs and the reconcile tests.
 
-IMPORTANT: these are hand-written *test data*, not the pipeline's real output.
-They let you exercise the reconcile → draft half of the pipeline with no API key
-and no network. The real path (run.py without --mock) reads these values from the
-PDFs with the vision model. Values here mirror what the two real Deye sheets say
-for the 5 kW model (including the known conflicts), so the mock draft demonstrates
-every reconciliation status.
+These are hand-written values, NOT pipeline output - they let the reconcile/draft
+half run without a key or network. They mirror the two real Deye sheets (5 kW
+column, conflicts included) so the mock draft shows every status.
 """
 from __future__ import annotations
 

@@ -1,8 +1,6 @@
-"""Central configuration: source documents, target model, paths, model settings.
+"""Config - source URLs, target model, paths, model settings.
 
-Nothing about the *values* inside the datasheets is hardcoded here -- only which
-documents to fetch and which model row we care about. Everything else is read
-from the PDFs at run time, so the pipeline survives a new datasheet revision.
+Only the URLs and the target model row live here; no spec values are hardcoded.
 """
 from __future__ import annotations
 
@@ -50,9 +48,7 @@ SOURCES: list[Source] = [
 ]
 
 
-# --- What SunBridge is ordering -------------------------------------------
-# They are buying the 5 kW model. The full model number carries a variant
-# suffix that differs between the two sheets, so we match on the stable prefix.
+# 5 kW model. The variant suffix differs between sheets, so match on the prefix.
 TARGET_MODEL_PREFIX = "SUN-5K-G06P3"
 TARGET_POWER = "5 kW"
 TARGET_DESCRIPTION = (
@@ -61,10 +57,8 @@ TARGET_DESCRIPTION = (
 )
 
 
-# --- Model / runtime settings ---------------------------------------------
-# Gemini free tier (Google AI Studio): reads images + returns JSON, no cost.
-# "gemini-flash-latest" is an alias that tracks the current free flash model,
-# so the pipeline keeps working when Google rotates concrete version names.
+# gemini-flash-latest is an alias for the current free flash model, so this
+# keeps working when Google renames versions.
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-flash-latest")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 

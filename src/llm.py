@@ -1,8 +1,5 @@
-"""Model client factory.
-
-Isolated here so the rest of the pipeline never imports a provider directly --
-swap this one file to run on a different backend (e.g. a local Ollama vision
-model) without touching the graph.
+"""Model client. Kept in one file so the backend can be swapped (e.g. a local
+Ollama model) without touching the rest of the pipeline.
 """
 from __future__ import annotations
 

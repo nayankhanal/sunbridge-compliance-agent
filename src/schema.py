@@ -1,13 +1,8 @@
-"""Data model for the pipeline.
+"""Pydantic models and the canonical field registry.
 
-Two layers:
-  1. What one datasheet says   -> DatasheetExtraction (list of ExtractedField)
-  2. What the two sheets say together -> ReconciliationResult (list of ReconciledField)
-
-The FIELDS registry is the canonical vocabulary. Each datasheet labels the same
-spec differently ("Max. DC Input Power" vs "Max. PV Input Power"), so we ask the
-vision model to map whatever it sees onto these stable keys, and record the
-original wording in `raw_text` for traceability.
+DatasheetExtraction is what one sheet gives us; ReconciliationResult is the two
+compared. The sheets name the same spec differently, so FIELDS defines stable
+keys and the model maps its wording onto them (raw_text keeps the original).
 """
 from __future__ import annotations
 

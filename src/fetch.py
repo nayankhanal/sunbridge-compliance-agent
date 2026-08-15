@@ -1,8 +1,6 @@
-"""Download the source datasheets from their public URLs.
+"""Download the datasheets from their URLs (cached under data/).
 
-Fetching is deliberately part of the pipeline (not pre-downloaded) so the run is
-reproducible from the links alone. Files are cached under data/ to avoid
-re-downloading on every run.
+Fetching is part of the run so it's reproducible from the links alone.
 """
 from __future__ import annotations
 

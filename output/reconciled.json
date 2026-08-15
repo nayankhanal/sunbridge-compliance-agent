@@ -1,7 +1,7 @@
 {
   "target_model": "SUN-5K-G06P3 (5 kW)",
   "target_power": "5 kW",
-  "generated_at": "2026-08-15T11:11:20+00:00",
+  "generated_at": "2026-08-15T11:25:11+00:00",
   "sources": [
     {
       "id": "AM2-P1",

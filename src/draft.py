@@ -1,7 +1,6 @@
-"""Render the reconciled data into the Markdown draft SunBridge hands its agent.
+"""Render the Markdown draft from the reconciled data.
 
-Deterministic templating (not an LLM) so the draft is reproducible and provably
-reflects the extracted data -- it can only show what reconciliation produced.
+Plain templating, not an LLM, so the draft only ever shows what was extracted.
 """
 from __future__ import annotations
 

@@ -1,15 +1,7 @@
-"""Compare the two per-sheet extractions field by field.
+"""Compare the two extractions field by field.
 
-This is where "show both sides honestly" happens. For every canonical field we
-decide one of:
-    agree           both sources, same value
-    agree_reworded  same meaning, different words (Transformerless == Non-Isolated)
-    conflict        both sources, genuinely different values (5.5 kW vs 5.5 kVA)
-    only_one        present in a single sheet
-    inconsistent    a sheet contradicts itself (weight printed as 4.8 and 11 kg)
-    missing         in neither sheet
-
-We never drop a value or pick a winner -- both are always carried into the output.
+Each field comes out as agree / agree_reworded / conflict / only_one /
+inconsistent / missing. Both values are always kept - we never pick a winner.
 """
 from __future__ import annotations
 

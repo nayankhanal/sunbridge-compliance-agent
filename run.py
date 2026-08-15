@@ -1,10 +1,9 @@
 """CLI entry point.
 
-    python run.py            # real run (needs GOOGLE_API_KEY in .env)
-    python run.py --mock     # fixture run, no key/network — for a quick look
+    python run.py          # real run, needs GOOGLE_API_KEY in .env
+    python run.py --mock   # fixture run, no key or network
 
-Writes output/reconciled.json (structured, source-attributed) and
-output/compliance_draft.md (the human-readable draft).
+Writes output/reconciled.json and output/compliance_draft.md.
 """
 from __future__ import annotations
 

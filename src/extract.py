@@ -1,8 +1,5 @@
-"""Vision extraction for a single datasheet, with schema validation + retry.
-
-The reliability story lives here: the model is asked for schema-constrained
-output, we validate it, and on a bad/empty response we retry up to N times
-instead of letting the run derail.
+"""Vision extraction for one datasheet: schema-constrained output, validated,
+with a bounded retry so a bad response doesn't kill the run.
 """
 from __future__ import annotations
 
