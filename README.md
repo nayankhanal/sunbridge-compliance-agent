@@ -23,17 +23,19 @@ pip install -r requirements.txt
 # Try it with zero setup (fixture data, no key, no network):
 python run.py --mock
 
-# Real run - reads the PDFs with a vision model:
-cp .env.example .env          # then paste your FREE Gemini key into .env
+# Real run - reads the live PDFs with a vision model.
+# First get a free Gemini key (no card): https://aistudio.google.com/apikey
+cp .env.example .env      # then open .env and set GOOGLE_API_KEY=<your key>
 python run.py
 
 # Tests (reconciliation logic):
 pytest -q
 ```
 
-A **free** Gemini API key (no credit card) comes from
-<https://aistudio.google.com/apikey>. The pipeline uses `gemini-flash-latest` (an alias for the current free flash
-model), which reads images and returns JSON on the free tier.
+The key is only needed for the real run (`--mock` needs nothing). It lives in
+`.env`, which is gitignored and never committed, so anyone cloning the repo has
+to add their own. The pipeline uses `gemini-flash-latest`, an alias for the
+current free flash model that reads images and returns JSON on the free tier.
 
 Outputs land in `output/`:
 - **`reconciled.json`** - structured, machine-readable; every field carries its
