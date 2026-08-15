@@ -1,0 +1,19 @@
+# secrets
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# regenerated artifacts (the pipeline recreates these from the source URLs)
+data/*.pdf
+data/*.png
+
+# os
+.DS_Store
+
+# NOTE: output/ is intentionally tracked so reviewers can see a sample
+# reconciled.json + compliance_draft.md without running the pipeline.

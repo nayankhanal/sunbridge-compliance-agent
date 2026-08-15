@@ -1,0 +1,520 @@
+{
+  "target_model": "SUN-5K-G06P3 (5 kW)",
+  "target_power": "5 kW",
+  "generated_at": "2026-08-14T17:24:18+00:00",
+  "sources": [
+    {
+      "id": "AM2-P1",
+      "url": "https://www.deyeinverter.com/deyeinverter/2023/10/07/datasheet_sun-4-12k-g06p3-eu-am2-p1_231007_en.pdf",
+      "variant_expected": "AM2-P1",
+      "variant_detected": "AM2-P1",
+      "revision_hint": "2023-10-07"
+    },
+    {
+      "id": "AM2",
+      "url": "https://www.deyeinverter.com/deyeinverter/2024/03/20/datasheet_sun-4-15k-g06p3-eu-am2_240318_en.pdf",
+      "variant_expected": "AM2",
+      "variant_detected": "AM2",
+      "revision_hint": "2024-03-18"
+    }
+  ],
+  "fields": [
+    {
+      "key": "model_number",
+      "label": "Model number (5 kW)",
+      "category": "product_identity",
+      "status": "conflict",
+      "values": {
+        "AM2-P1": "SUN-5K-G06P3-EU-AM2-P1",
+        "AM2": "SUN-5K-G06P3-EU-AM2"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": "Sources give different values."
+    },
+    {
+      "key": "rated_output_power",
+      "label": "Rated output power",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "5 kW",
+        "AM2": "5 kW"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "max_power",
+      "label": "Max. output power",
+      "category": "product_identity",
+      "status": "conflict",
+      "values": {
+        "AM2-P1": "5.5 kW",
+        "AM2": "5.5 kVA"
+      },
+      "raw": {
+        "AM2-P1": "Max. Active Power (kW): 5.5",
+        "AM2": "Max. AC Output Apparent Power (kVA): 5.5"
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": "Values differ in unit/quantity (e.g. kW vs kVA) -- confirm which the factory means."
+    },
+    {
+      "key": "rated_ac_output_current",
+      "label": "Rated AC output current",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "7.6/7.3 A",
+        "AM2": "7.6/7.3 A"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "max_ac_output_current",
+      "label": "Max. AC output current",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "8.4/8 A",
+        "AM2": "8.4/8 A"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "output_voltage_range",
+      "label": "Output voltage / range",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "220/380V, 230/400V (0.85–1.1 Un)",
+        "AM2": "220/380V, 230/400V (0.85–1.1 Un)"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "grid_frequency",
+      "label": "Grid frequency",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "50/60 Hz",
+        "AM2": "50/60 Hz"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "phase",
+      "label": "Operating phase / grid form",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "Three Phase",
+        "AM2": "Three Phase"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "mppt_trackers_strings",
+      "label": "MPP trackers / strings",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "2 / 1+1",
+        "AM2": "2 / 1+1"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "max_efficiency",
+      "label": "Max. efficiency",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "98.3 %",
+        "AM2": "98.3 %"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "euro_efficiency",
+      "label": "Euro efficiency",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "98.1 %",
+        "AM2": "98.1 %"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "topology",
+      "label": "Topology",
+      "category": "product_identity",
+      "status": "agree_reworded",
+      "values": {
+        "AM2-P1": "Transformerless",
+        "AM2": "Non-Isolated"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": "Same meaning, different wording."
+    },
+    {
+      "key": "max_dc_input_power",
+      "label": "Max. DC/PV input power",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "6.5 kW",
+        "AM2": "6.5 kW"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "mppt_voltage_range",
+      "label": "MPPT voltage range",
+      "category": "product_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "120-1000 V",
+        "AM2": "120-1000 V"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "manufacturer_name",
+      "label": "Manufacturer (legal name)",
+      "category": "manufacturer_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "Ningbo Deye Inverter Technology Co., Ltd.",
+        "AM2": "Ningbo Deye Inverter Technology Co., Ltd."
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "manufacturer_address",
+      "label": "Factory address",
+      "category": "manufacturer_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "No. 26 South YongJiang Road, Daqi, Beilun, Ningbo, Zhejiang, China",
+        "AM2": "No. 26 South YongJiang Road, Daqi, Beilun, Ningbo, Zhejiang, China"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "country_of_manufacture",
+      "label": "Country of manufacture",
+      "category": "manufacturer_identity",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "China",
+        "AM2": "China"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "grid_connection_standards",
+      "label": "Grid-connection standards",
+      "category": "test_evidence",
+      "status": "conflict",
+      "values": {
+        "AM2-P1": "IEC 61727, IEC 62116, EN 50549",
+        "AM2": "IEC 61727, IEC 62116, CEI 0-21, EN 50549, NRS 097"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "medium",
+        "AM2": "medium"
+      },
+      "note": "Sources give different values."
+    },
+    {
+      "key": "safety_emc_standards",
+      "label": "Safety / EMC standards",
+      "category": "test_evidence",
+      "status": "conflict",
+      "values": {
+        "AM2-P1": "IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2",
+        "AM2": "IEC/EN 62109-1, IEC/EN 62109-2"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "medium",
+        "AM2": "medium"
+      },
+      "note": "Sources give different values."
+    },
+    {
+      "key": "overvoltage_category",
+      "label": "Overvoltage category",
+      "category": "test_evidence",
+      "status": "only_one",
+      "values": {
+        "AM2-P1": null,
+        "AM2": "OVC II(DC), OVC III(AC)"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "medium",
+        "AM2": "medium"
+      },
+      "note": "Only stated in AM2."
+    },
+    {
+      "key": "warranty",
+      "label": "Warranty",
+      "category": "test_evidence",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "5 Years",
+        "AM2": "5 Years"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "ip_rating",
+      "label": "Ingress protection (IP) rating",
+      "category": "labeling",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "IP65",
+        "AM2": "IP65"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "weight",
+      "label": "Weight",
+      "category": "labeling",
+      "status": "inconsistent",
+      "values": {
+        "AM2-P1": "11 kg",
+        "AM2": "11 kg"
+      },
+      "raw": {
+        "AM2-P1": "Weight (kg): 11",
+        "AM2": "Weight (kg): 4.8  ...  11"
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "low"
+      },
+      "note": "A source's value looks internally inconsistent. AM2: Sheet prints weight twice with different numbers (4.8 and 11) — inconsistent; 4.8 kg is implausible for this unit."
+    },
+    {
+      "key": "dimensions",
+      "label": "Dimensions (WxHxD)",
+      "category": "labeling",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "283x463x178 mm",
+        "AM2": "283x463x178 mm"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "operating_temp_range",
+      "label": "Operating temperature range",
+      "category": "labeling",
+      "status": "agree",
+      "values": {
+        "AM2-P1": "-25 to +60 °C",
+        "AM2": "-25 to +60 °C"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": null
+    },
+    {
+      "key": "cooling",
+      "label": "Cooling method",
+      "category": "labeling",
+      "status": "agree_reworded",
+      "values": {
+        "AM2-P1": "Free Cooling",
+        "AM2": "Natural Cooling"
+      },
+      "raw": {
+        "AM2-P1": null,
+        "AM2": null
+      },
+      "confidence": {
+        "AM2-P1": "high",
+        "AM2": "high"
+      },
+      "note": "Same meaning, different wording."
+    }
+  ],
+  "notes": [
+    "The two sheets describe different variants of the same 5 kW model (AM2-P1=AM2-P1, AM2=AM2). Cross-sheet differences are expected variant/revision differences, not necessarily errors."
+  ]
+}

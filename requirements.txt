@@ -1,0 +1,11 @@
+# Pinned to the versions this was built and tested against.
+langgraph==1.2.11
+langchain-google-genai==4.3.3
+langchain-core==1.5.4
+pymupdf==1.28.2
+httpx==0.28.1
+pydantic==2.13.4
+python-dotenv==1.2.2
+
+# dev / tests
+pytest>=8.0
