@@ -1,4 +1,4 @@
-"""LangGraph pipeline: fetch → render → extract → reconcile → draft.
+"""LangGraph pipeline: fetch -> render -> extract -> reconcile -> draft.
 
 A deliberately small, linear graph. State is a plain dict; each node returns the
 keys it updates. Retry/validation lives inside the extract node (see extract.py)

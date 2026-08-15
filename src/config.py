@@ -12,10 +12,9 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-load_dotenv()
-
 # --- Paths ----------------------------------------------------------------
 ROOT_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(ROOT_DIR / ".env")  # load from the project root, regardless of cwd
 DATA_DIR = ROOT_DIR / "data"       # downloaded PDFs + rendered page images (regenerated)
 OUTPUT_DIR = ROOT_DIR / "output"   # reconciled.json + compliance_draft.md
 PROMPTS_DIR = ROOT_DIR / "prompts"
@@ -64,7 +63,9 @@ TARGET_DESCRIPTION = (
 
 # --- Model / runtime settings ---------------------------------------------
 # Gemini free tier (Google AI Studio): reads images + returns JSON, no cost.
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+# "gemini-flash-latest" is an alias that tracks the current free flash model,
+# so the pipeline keeps working when Google rotates concrete version names.
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-flash-latest")
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 RENDER_DPI = int(os.getenv("RENDER_DPI", "200"))   # page image resolution for vision

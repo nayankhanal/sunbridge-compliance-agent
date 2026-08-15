@@ -32,8 +32,8 @@ pytest -q
 ```
 
 A **free** Gemini API key (no credit card) comes from
-<https://aistudio.google.com/apikey>. The pipeline uses `gemini-2.5-flash`, which
-reads images and returns JSON on the free tier.
+<https://aistudio.google.com/apikey>. The pipeline uses `gemini-flash-latest` (an alias for the current free flash
+model), which reads images and returns JSON on the free tier.
 
 Outputs land in `output/`:
 - **`reconciled.json`** — structured, machine-readable; every field carries its

@@ -41,10 +41,18 @@ INCONSISTENT_HINTS = (
 
 
 def _norm(v: str | None) -> str | None:
+    """Normalize formatting so cosmetic differences don't read as conflicts.
+
+    Only whitespace/punctuation spacing is unified -- content is left intact, so
+    genuine differences (e.g. one sheet listing more standards) still surface.
+    """
     if v is None:
         return None
     s = v.strip().lower().replace("℃", "°c")
-    s = re.sub(r"\s*%\s*", "%", s)
+    s = re.sub(r"\s*%\s*", "%", s)     # "98.3 %"  -> "98.3%"
+    s = re.sub(r"\s*/\s*", "/", s)      # "2 / 1+1" -> "2/1+1"
+    s = re.sub(r"\s*,\s*", ",", s)      # "a, b"    -> "a,b"
+    s = re.sub(r"\s*(°)", r"\1", s)     # "+60 °c"  -> "+60°c"
     s = re.sub(r"\s+", " ", s)
     return s.rstrip(". ")
 
