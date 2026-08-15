@@ -1,7 +1,7 @@
 {
   "target_model": "SUN-5K-G06P3 (5 kW)",
   "target_power": "5 kW",
-  "generated_at": "2026-08-15T11:25:11+00:00",
+  "generated_at": "2026-08-15T21:10:34+00:00",
   "sources": [
     {
       "id": "AM2-P1",
@@ -29,8 +29,8 @@
         "AM2": "SUN-5K-G06P3-EU-AM2"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "SUN-5K-G06P3 -EU-AM2-P1",
+        "AM2": "SUN-5K-G06P3-EU-AM2"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -48,8 +48,8 @@
         "AM2": "5 kW"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "5",
+        "AM2": "5"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -67,8 +67,8 @@
         "AM2": "5.5 kVA"
       },
       "raw": {
-        "AM2-P1": "Max. Active Power (kW): 5.5",
-        "AM2": "Max. AC Output Apparent Power (kVA): 5.5"
+        "AM2-P1": "5.5",
+        "AM2": "5.5"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -86,8 +86,8 @@
         "AM2": "7.6/7.3 A"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "7.6/7.3",
+        "AM2": "7.6/7.3"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -105,8 +105,8 @@
         "AM2": "8.4/8 A"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "8.4/8",
+        "AM2": "8.4/8"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -118,58 +118,58 @@
       "key": "output_voltage_range",
       "label": "Output voltage / range",
       "category": "product_identity",
-      "status": "agree",
+      "status": "conflict",
       "values": {
-        "AM2-P1": "220/380V, 230/400V (0.85–1.1 Un)",
-        "AM2": "220/380V, 230/400V (0.85–1.1 Un)"
+        "AM2-P1": "3L/N/PE 220/380V, 230/400V 0.85Un-1.1Un",
+        "AM2": "220/380 V, 230/400 V (0.85Un-1.1Un)"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "3L/N/PE 220/380V, 230/400V 0.85Un-1.1Un (this may vary with grid standards)",
+        "AM2": "220/380V, 230/400V 0.85Un-1.1Un"
       },
       "confidence": {
         "AM2-P1": "high",
         "AM2": "high"
       },
-      "note": null
+      "note": "Sources give different values."
     },
     {
       "key": "grid_frequency",
       "label": "Grid frequency",
       "category": "product_identity",
-      "status": "agree",
+      "status": "conflict",
       "values": {
-        "AM2-P1": "50/60 Hz",
-        "AM2": "50/60 Hz"
+        "AM2-P1": "50 / 60 Hz",
+        "AM2": "50/45-55 Hz, 60/55-65 Hz"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "50 / 60 (Optional)",
+        "AM2": "50/45-55, 60/55-65"
       },
       "confidence": {
         "AM2-P1": "high",
         "AM2": "high"
       },
-      "note": null
+      "note": "Sources give different values."
     },
     {
       "key": "phase",
       "label": "Operating phase / grid form",
       "category": "product_identity",
-      "status": "agree",
+      "status": "conflict",
       "values": {
         "AM2-P1": "Three Phase",
-        "AM2": "Three Phase"
+        "AM2": "3L/N/PE"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "Three Phase",
+        "AM2": "3L/N/PE"
       },
       "confidence": {
         "AM2-P1": "high",
         "AM2": "high"
       },
-      "note": null
+      "note": "Sources give different values."
     },
     {
       "key": "mppt_trackers_strings",
@@ -178,11 +178,11 @@
       "status": "agree",
       "values": {
         "AM2-P1": "2 / 1+1",
-        "AM2": "2 / 1+1"
+        "AM2": "2/1+1"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "No.of MPP Trackers: 2; No.of Strings per MPP Tracker: 1+1",
+        "AM2": "2/1+1"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -196,12 +196,12 @@
       "category": "product_identity",
       "status": "agree",
       "values": {
-        "AM2-P1": "98.3 %",
-        "AM2": "98.3 %"
+        "AM2-P1": "98.2 %",
+        "AM2": "98.2 %"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "98.2%",
+        "AM2": "98.2%"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -213,20 +213,20 @@
       "key": "euro_efficiency",
       "label": "Euro efficiency",
       "category": "product_identity",
-      "status": "agree",
+      "status": "conflict",
       "values": {
-        "AM2-P1": "98.1 %",
-        "AM2": "98.1 %"
+        "AM2-P1": "97.5 %",
+        "AM2": "97.6 %"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "97.5%",
+        "AM2": "97.6%"
       },
       "confidence": {
         "AM2-P1": "high",
         "AM2": "high"
       },
-      "note": null
+      "note": "Sources give different values."
     },
     {
       "key": "topology",
@@ -238,8 +238,8 @@
         "AM2": "Non-Isolated"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "Transformerless",
+        "AM2": "Non-Isolated"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -257,8 +257,8 @@
         "AM2": "6.5 kW"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "6.5",
+        "AM2": "6.5"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -276,8 +276,8 @@
         "AM2": "120-1000 V"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "120-1000",
+        "AM2": "120-1000"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -295,8 +295,8 @@
         "AM2": "Ningbo Deye Inverter Technology Co., Ltd."
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "Ningbo Deye Inverter Technology Co., Ltd.",
+        "AM2": "Ningbo Deye Inverter Technology Co., Ltd."
       },
       "confidence": {
         "AM2-P1": "high",
@@ -310,12 +310,12 @@
       "category": "manufacturer_identity",
       "status": "agree",
       "values": {
-        "AM2-P1": "No. 26 South YongJiang Road, Daqi, Beilun, Ningbo, Zhejiang, China",
-        "AM2": "No. 26 South YongJiang Road, Daqi, Beilun, Ningbo, Zhejiang, China"
+        "AM2-P1": "No. 26 South YongJiang Road, Daqi, Beilun, NingBo, Zhejiang, China",
+        "AM2": "No. 26 South YongJiang Road, Daqi, Beilun, NingBo, Zhejiang, China."
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "Add: No. 26 South YongJiang Road, Daqi, Beilun, NingBo, Zhejiang, China.",
+        "AM2": "Add: No. 26 South YongJiang Road, Daqi, Beilun, NingBo, Zhejiang, China."
       },
       "confidence": {
         "AM2-P1": "high",
@@ -333,14 +333,14 @@
         "AM2": "China"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "China",
+        "AM2": "China"
       },
       "confidence": {
         "AM2-P1": "high",
         "AM2": "high"
       },
-      "note": null
+      "note": "AM2-P1: Derived from manufacturer address footer"
     },
     {
       "key": "grid_connection_standards",
@@ -349,15 +349,15 @@
       "status": "conflict",
       "values": {
         "AM2-P1": "IEC 61727, IEC 62116, EN 50549",
-        "AM2": "IEC 61727, IEC 62116, CEI 0-21, EN 50549, NRS 097"
+        "AM2": "IEC 61727, IEC 62116, CEI 0-21, EN 50549, NRS 097, RD 140, UNE 217002, OVE-Richtlinie R25, G99, VDE-AR-N 4105"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "IEC 61727, IEC 62116, EN 50549",
+        "AM2": "IEC 61727, IEC 62116, CEI 0-21, EN 50549, NRS 097, RD 140, UNE 217002, OVE-Richtlinie R25, G99, VDE-AR-N 4105"
       },
       "confidence": {
-        "AM2-P1": "medium",
-        "AM2": "medium"
+        "AM2-P1": "high",
+        "AM2": "high"
       },
       "note": "Sources give different values."
     },
@@ -365,20 +365,20 @@
       "key": "safety_emc_standards",
       "label": "Safety / EMC standards",
       "category": "test_evidence",
-      "status": "conflict",
+      "status": "agree",
       "values": {
         "AM2-P1": "IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2",
-        "AM2": "IEC/EN 62109-1, IEC/EN 62109-2"
+        "AM2": "IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2",
+        "AM2": "IEC/EN 61000-6-1/2/3/4, IEC/EN 62109-1, IEC/EN 62109-2"
       },
       "confidence": {
-        "AM2-P1": "medium",
-        "AM2": "medium"
+        "AM2-P1": "high",
+        "AM2": "high"
       },
-      "note": "Sources give different values."
+      "note": null
     },
     {
       "key": "overvoltage_category",
@@ -391,11 +391,11 @@
       },
       "raw": {
         "AM2-P1": null,
-        "AM2": null
+        "AM2": "OVC II(DC), OVC III(AC)"
       },
       "confidence": {
-        "AM2-P1": "medium",
-        "AM2": "medium"
+        "AM2-P1": "high",
+        "AM2": "high"
       },
       "note": "Only stated in AM2."
     },
@@ -409,8 +409,8 @@
         "AM2": "5 Years"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "5 Years",
+        "AM2": "5 Years"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -428,8 +428,8 @@
         "AM2": "IP65"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "IP65",
+        "AM2": "IP 65"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -441,20 +441,20 @@
       "key": "weight",
       "label": "Weight",
       "category": "labeling",
-      "status": "inconsistent",
+      "status": "agree",
       "values": {
         "AM2-P1": "11 kg",
         "AM2": "11 kg"
       },
       "raw": {
-        "AM2-P1": "Weight (kg): 11",
-        "AM2": "Weight (kg): 4.8  ...  11"
+        "AM2-P1": "11",
+        "AM2": "11"
       },
       "confidence": {
         "AM2-P1": "high",
-        "AM2": "low"
+        "AM2": "high"
       },
-      "note": "A source's value looks internally inconsistent. AM2: Sheet prints weight twice with different numbers (4.8 and 11) — inconsistent; 4.8 kg is implausible for this unit."
+      "note": null
     },
     {
       "key": "dimensions",
@@ -466,8 +466,8 @@
         "AM2": "283x463x178 mm"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "283×463×178 (Excluding connectors and brackets)",
+        "AM2": "283×463×178 (Excluding Connectors and Brackets)"
       },
       "confidence": {
         "AM2-P1": "high",
@@ -479,20 +479,20 @@
       "key": "operating_temp_range",
       "label": "Operating temperature range",
       "category": "labeling",
-      "status": "agree",
+      "status": "conflict",
       "values": {
         "AM2-P1": "-25 to +60 °C",
-        "AM2": "-25 to +60 °C"
+        "AM2": "-25 to +60 °C (>45 °C Derating)"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "-25 to +60°C, >45°C Derating",
+        "AM2": "-25 to +60℃, >45℃ Derating"
       },
       "confidence": {
         "AM2-P1": "high",
         "AM2": "high"
       },
-      "note": null
+      "note": "Sources give different values."
     },
     {
       "key": "cooling",
@@ -504,8 +504,8 @@
         "AM2": "Natural Cooling"
       },
       "raw": {
-        "AM2-P1": null,
-        "AM2": null
+        "AM2-P1": "Free Cooling",
+        "AM2": "Natural Cooling"
       },
       "confidence": {
         "AM2-P1": "high",
